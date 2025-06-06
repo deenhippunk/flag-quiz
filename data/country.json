@@ -1,0 +1,2502 @@
+[
+    {
+        "countryCode": "TGO",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Togo",
+        "countryNameTH": "",
+        "capitalNameEN": "Lomé",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tg.png"
+    },
+    {
+        "countryCode": "MYT",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Mayotte",
+        "countryNameTH": "",
+        "capitalNameEN": "Mamoudzou",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/yt.png"
+    },
+    {
+        "countryCode": "GEO",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Georgia",
+        "countryNameTH": "",
+        "capitalNameEN": "Tbilisi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ge.png"
+    },
+    {
+        "countryCode": "VUT",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Vanuatu",
+        "countryNameTH": "",
+        "capitalNameEN": "Port Vila",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/vu.png"
+    },
+    {
+        "countryCode": "KGZ",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Kyrgyzstan",
+        "countryNameTH": "",
+        "capitalNameEN": "Bishkek",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kg.png"
+    },
+    {
+        "countryCode": "NER",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Niger",
+        "countryNameTH": "",
+        "capitalNameEN": "Niamey",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ne.png"
+    },
+    {
+        "countryCode": "CHN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "China",
+        "countryNameTH": "",
+        "capitalNameEN": "Beijing",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cn.png"
+    },
+    {
+        "countryCode": "TUV",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Tuvalu",
+        "countryNameTH": "",
+        "capitalNameEN": "Funafuti",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tv.png"
+    },
+    {
+        "countryCode": "COM",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Comoros",
+        "countryNameTH": "",
+        "capitalNameEN": "Moroni",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/km.png"
+    },
+    {
+        "countryCode": "BIH",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Bosnia and Herzegovina",
+        "countryNameTH": "",
+        "capitalNameEN": "Sarajevo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ba.png"
+    },
+    {
+        "countryCode": "BHR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Bahrain",
+        "countryNameTH": "",
+        "capitalNameEN": "Manama",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bh.png"
+    },
+    {
+        "countryCode": "SOM",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Somalia",
+        "countryNameTH": "",
+        "capitalNameEN": "Mogadishu",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/so.png"
+    },
+    {
+        "countryCode": "BLM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Barthélemy",
+        "countryNameTH": "",
+        "capitalNameEN": "Gustavia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bl.png"
+    },
+    {
+        "countryCode": "LVA",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Latvia",
+        "countryNameTH": "",
+        "capitalNameEN": "Riga",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lv.png"
+    },
+    {
+        "countryCode": "CYM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Cayman Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "George Town",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ky.png"
+    },
+    {
+        "countryCode": "NLD",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Netherlands",
+        "countryNameTH": "",
+        "capitalNameEN": "Amsterdam",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nl.png"
+    },
+    {
+        "countryCode": "LSO",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Lesotho",
+        "countryNameTH": "",
+        "capitalNameEN": "Maseru",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ls.png"
+    },
+    {
+        "countryCode": "VEN",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Venezuela",
+        "countryNameTH": "",
+        "capitalNameEN": "Caracas",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ve.png"
+    },
+    {
+        "countryCode": "KEN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Kenya",
+        "countryNameTH": "",
+        "capitalNameEN": "Nairobi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ke.png"
+    },
+    {
+        "countryCode": "TUR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Turkey",
+        "countryNameTH": "",
+        "capitalNameEN": "Ankara",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tr.png"
+    },
+    {
+        "countryCode": "FJI",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Fiji",
+        "countryNameTH": "",
+        "capitalNameEN": "Suva",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fj.png"
+    },
+    {
+        "countryCode": "TTO",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Trinidad and Tobago",
+        "countryNameTH": "",
+        "capitalNameEN": "Port of Spain",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tt.png"
+    },
+    {
+        "countryCode": "HND",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Honduras",
+        "countryNameTH": "",
+        "capitalNameEN": "Tegucigalpa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/hn.png"
+    },
+    {
+        "countryCode": "JEY",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Jersey",
+        "countryNameTH": "",
+        "capitalNameEN": "Saint Helier",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/je.png"
+    },
+    {
+        "countryCode": "DJI",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Djibouti",
+        "countryNameTH": "",
+        "capitalNameEN": "Djibouti",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/dj.png"
+    },
+    {
+        "countryCode": "REU",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Réunion",
+        "countryNameTH": "",
+        "capitalNameEN": "Saint-Denis",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/re.png"
+    },
+    {
+        "countryCode": "SWZ",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Eswatini",
+        "countryNameTH": "",
+        "capitalNameEN": "Mbabane",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sz.png"
+    },
+    {
+        "countryCode": "TJK",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Tajikistan",
+        "countryNameTH": "",
+        "capitalNameEN": "Dushanbe",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tj.png"
+    },
+    {
+        "countryCode": "SAU",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Saudi Arabia",
+        "countryNameTH": "",
+        "capitalNameEN": "Riyadh",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sa.png"
+    },
+    {
+        "countryCode": "BMU",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Bermuda",
+        "countryNameTH": "",
+        "capitalNameEN": "Hamilton",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bm.png"
+    },
+    {
+        "countryCode": "NZL",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "New Zealand",
+        "countryNameTH": "",
+        "capitalNameEN": "Wellington",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nz.png"
+    },
+    {
+        "countryCode": "BLR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Belarus",
+        "countryNameTH": "",
+        "capitalNameEN": "Minsk",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/by.png"
+    },
+    {
+        "countryCode": "CXR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Christmas Island",
+        "countryNameTH": "",
+        "capitalNameEN": "Flying Fish Cove",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cx.png"
+    },
+    {
+        "countryCode": "GMB",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Gambia",
+        "countryNameTH": "",
+        "capitalNameEN": "Banjul",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gm.png"
+    },
+    {
+        "countryCode": "PYF",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "French Polynesia",
+        "countryNameTH": "",
+        "capitalNameEN": "Papeetē",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pf.png"
+    },
+    {
+        "countryCode": "COD",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "DR Congo",
+        "countryNameTH": "",
+        "capitalNameEN": "Kinshasa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cd.png"
+    },
+    {
+        "countryCode": "CRI",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Costa Rica",
+        "countryNameTH": "",
+        "capitalNameEN": "San José",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cr.png"
+    },
+    {
+        "countryCode": "MWI",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Malawi",
+        "countryNameTH": "",
+        "capitalNameEN": "Lilongwe",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mw.png"
+    },
+    {
+        "countryCode": "COG",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Republic of the Congo",
+        "countryNameTH": "",
+        "capitalNameEN": "Brazzaville",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cg.png"
+    },
+    {
+        "countryCode": "OMN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Oman",
+        "countryNameTH": "",
+        "capitalNameEN": "Muscat",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/om.png"
+    },
+    {
+        "countryCode": "IRQ",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Iraq",
+        "countryNameTH": "",
+        "capitalNameEN": "Baghdad",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/iq.png"
+    },
+    {
+        "countryCode": "NIU",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Niue",
+        "countryNameTH": "",
+        "capitalNameEN": "Alofi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nu.png"
+    },
+    {
+        "countryCode": "SEN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Senegal",
+        "countryNameTH": "",
+        "capitalNameEN": "Dakar",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sn.png"
+    },
+    {
+        "countryCode": "LBN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Lebanon",
+        "countryNameTH": "",
+        "capitalNameEN": "Beirut",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lb.png"
+    },
+    {
+        "countryCode": "AGO",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Angola",
+        "countryNameTH": "",
+        "capitalNameEN": "Luanda",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ao.png"
+    },
+    {
+        "countryCode": "IRN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Iran",
+        "countryNameTH": "",
+        "capitalNameEN": "Tehran",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ir.png"
+    },
+    {
+        "countryCode": "ECU",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Ecuador",
+        "countryNameTH": "",
+        "capitalNameEN": "Quito",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ec.png"
+    },
+    {
+        "countryCode": "LAO",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Laos",
+        "countryNameTH": "",
+        "capitalNameEN": "Vientiane",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/la.png"
+    },
+    {
+        "countryCode": "LKA",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Sri Lanka",
+        "countryNameTH": "",
+        "capitalNameEN": "Sri Jayawardenepura Kotte",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lk.png"
+    },
+    {
+        "countryCode": "ABW",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Aruba",
+        "countryNameTH": "",
+        "capitalNameEN": "Oranjestad",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/aw.png"
+    },
+    {
+        "countryCode": "STP",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "São Tomé and Príncipe",
+        "countryNameTH": "",
+        "capitalNameEN": "São Tomé",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/st.png"
+    },
+    {
+        "countryCode": "GRD",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Grenada",
+        "countryNameTH": "",
+        "capitalNameEN": "St. George's",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gd.png"
+    },
+    {
+        "countryCode": "MSR",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Montserrat",
+        "countryNameTH": "",
+        "capitalNameEN": "Plymouth",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ms.png"
+    },
+    {
+        "countryCode": "ESH",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Western Sahara",
+        "countryNameTH": "",
+        "capitalNameEN": "El Aaiún",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/eh.png"
+    },
+    {
+        "countryCode": "GIN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Guinea",
+        "countryNameTH": "",
+        "capitalNameEN": "Conakry",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gn.png"
+    },
+    {
+        "countryCode": "VGB",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "British Virgin Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Road Town",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/vg.png"
+    },
+    {
+        "countryCode": "PAN",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Panama",
+        "countryNameTH": "",
+        "capitalNameEN": "Panama City",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pa.png"
+    },
+    {
+        "countryCode": "YEM",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Yemen",
+        "countryNameTH": "",
+        "capitalNameEN": "Sana'a",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ye.png"
+    },
+    {
+        "countryCode": "EST",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Estonia",
+        "countryNameTH": "",
+        "capitalNameEN": "Tallinn",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ee.png"
+    },
+    {
+        "countryCode": "GUY",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Guyana",
+        "countryNameTH": "",
+        "capitalNameEN": "Georgetown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gy.png"
+    },
+    {
+        "countryCode": "LUX",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Luxembourg",
+        "countryNameTH": "",
+        "capitalNameEN": "Luxembourg",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lu.png"
+    },
+    {
+        "countryCode": "NAM",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Namibia",
+        "countryNameTH": "",
+        "capitalNameEN": "Windhoek",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/na.png"
+    },
+    {
+        "countryCode": "UNK",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Kosovo",
+        "countryNameTH": "",
+        "capitalNameEN": "Pristina",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/xk.png"
+    },
+    {
+        "countryCode": "NCL",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "New Caledonia",
+        "countryNameTH": "",
+        "capitalNameEN": "Nouméa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nc.png"
+    },
+    {
+        "countryCode": "SPM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Pierre and Miquelon",
+        "countryNameTH": "",
+        "capitalNameEN": "Saint-Pierre",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pm.png"
+    },
+    {
+        "countryCode": "LBY",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Libya",
+        "countryNameTH": "",
+        "capitalNameEN": "Tripoli",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ly.png"
+    },
+    {
+        "countryCode": "MMR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Myanmar",
+        "countryNameTH": "",
+        "capitalNameEN": "Naypyidaw",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mm.png"
+    },
+    {
+        "countryCode": "ISR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Israel",
+        "countryNameTH": "",
+        "capitalNameEN": "Jerusalem",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/il.png"
+    },
+    {
+        "countryCode": "MLI",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Mali",
+        "countryNameTH": "",
+        "capitalNameEN": "Bamako",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ml.png"
+    },
+    {
+        "countryCode": "ARG",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Argentina",
+        "countryNameTH": "",
+        "capitalNameEN": "Buenos Aires",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ar.png"
+    },
+    {
+        "countryCode": "GUF",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "French Guiana",
+        "countryNameTH": "",
+        "capitalNameEN": "Cayenne",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gf.png"
+    },
+    {
+        "countryCode": "UGA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Uganda",
+        "countryNameTH": "",
+        "capitalNameEN": "Kampala",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ug.png"
+    },
+    {
+        "countryCode": "MYS",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Malaysia",
+        "countryNameTH": "",
+        "capitalNameEN": "Kuala Lumpur",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/my.png"
+    },
+    {
+        "countryCode": "ZMB",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Zambia",
+        "countryNameTH": "",
+        "capitalNameEN": "Lusaka",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/zm.png"
+    },
+    {
+        "countryCode": "FSM",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Micronesia",
+        "countryNameTH": "",
+        "capitalNameEN": "Palikir",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fm.png"
+    },
+    {
+        "countryCode": "SVK",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Slovakia",
+        "countryNameTH": "",
+        "capitalNameEN": "Bratislava",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sk.png"
+    },
+    {
+        "countryCode": "BDI",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Burundi",
+        "countryNameTH": "",
+        "capitalNameEN": "Gitega",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bi.png"
+    },
+    {
+        "countryCode": "SRB",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Serbia",
+        "countryNameTH": "",
+        "capitalNameEN": "Belgrade",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/rs.png"
+    },
+    {
+        "countryCode": "TKM",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Turkmenistan",
+        "countryNameTH": "",
+        "capitalNameEN": "Ashgabat",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tm.png"
+    },
+    {
+        "countryCode": "ZAF",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "South Africa",
+        "countryNameTH": "",
+        "capitalNameEN": "Pretoria",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/za.png"
+    },
+    {
+        "countryCode": "KAZ",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Kazakhstan",
+        "countryNameTH": "",
+        "capitalNameEN": "Astana",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kz.png"
+    },
+    {
+        "countryCode": "CAN",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Canada",
+        "countryNameTH": "",
+        "capitalNameEN": "Ottawa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ca.png"
+    },
+    {
+        "countryCode": "POL",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Poland",
+        "countryNameTH": "",
+        "capitalNameEN": "Warsaw",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pl.png"
+    },
+    {
+        "countryCode": "PRI",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Puerto Rico",
+        "countryNameTH": "",
+        "capitalNameEN": "San Juan",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pr.png"
+    },
+    {
+        "countryCode": "CCK",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Cocos (Keeling) Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "West Island",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cc.png"
+    },
+    {
+        "countryCode": "SMR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "San Marino",
+        "countryNameTH": "",
+        "capitalNameEN": "City of San Marino",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sm.png"
+    },
+    {
+        "countryCode": "ASM",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "American Samoa",
+        "countryNameTH": "",
+        "capitalNameEN": "Pago Pago",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/as.png"
+    },
+    {
+        "countryCode": "QAT",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Qatar",
+        "countryNameTH": "",
+        "capitalNameEN": "Doha",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/qa.png"
+    },
+    {
+        "countryCode": "GIB",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Gibraltar",
+        "countryNameTH": "",
+        "capitalNameEN": "Gibraltar",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gi.png"
+    },
+    {
+        "countryCode": "HRV",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Croatia",
+        "countryNameTH": "",
+        "capitalNameEN": "Zagreb",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/hr.png"
+    },
+    {
+        "countryCode": "SJM",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Svalbard and Jan Mayen",
+        "countryNameTH": "",
+        "capitalNameEN": "Longyearbyen",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sj.png"
+    },
+    {
+        "countryCode": "IMN",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Isle of Man",
+        "countryNameTH": "",
+        "capitalNameEN": "Douglas",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/im.png"
+    },
+    {
+        "countryCode": "PSE",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Palestine",
+        "countryNameTH": "",
+        "capitalNameEN": "Ramallah",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ps.png"
+    },
+    {
+        "countryCode": "MUS",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Mauritius",
+        "countryNameTH": "",
+        "capitalNameEN": "Port Louis",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mu.png"
+    },
+    {
+        "countryCode": "MAF",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Martin",
+        "countryNameTH": "",
+        "capitalNameEN": "Marigot",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mf.png"
+    },
+    {
+        "countryCode": "SLE",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Sierra Leone",
+        "countryNameTH": "",
+        "capitalNameEN": "Freetown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sl.png"
+    },
+    {
+        "countryCode": "KNA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Kitts and Nevis",
+        "countryNameTH": "",
+        "capitalNameEN": "Basseterre",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kn.png"
+    },
+    {
+        "countryCode": "ISL",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Iceland",
+        "countryNameTH": "",
+        "capitalNameEN": "Reykjavik",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/is.png"
+    },
+    {
+        "countryCode": "HMD",
+        "continentNameEN": "Antarctica",
+        "continentNameTH": "แอนตาร์กติกา",
+        "countryNameEN": "Heard Island and McDonald Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/hm.png"
+    },
+    {
+        "countryCode": "KWT",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Kuwait",
+        "countryNameTH": "",
+        "capitalNameEN": "Kuwait City",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kw.png"
+    },
+    {
+        "countryCode": "TWN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Taiwan",
+        "countryNameTH": "",
+        "capitalNameEN": "Taipei",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tw.png"
+    },
+    {
+        "countryCode": "CMR",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Cameroon",
+        "countryNameTH": "",
+        "capitalNameEN": "Yaoundé",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cm.png"
+    },
+    {
+        "countryCode": "SLV",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "El Salvador",
+        "countryNameTH": "",
+        "capitalNameEN": "San Salvador",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sv.png"
+    },
+    {
+        "countryCode": "MAC",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Macau",
+        "countryNameTH": "",
+        "capitalNameEN": "",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mo.png"
+    },
+    {
+        "countryCode": "CUB",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Cuba",
+        "countryNameTH": "",
+        "capitalNameEN": "Havana",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cu.png"
+    },
+    {
+        "countryCode": "BRA",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Brazil",
+        "countryNameTH": "",
+        "capitalNameEN": "Brasília",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/br.png"
+    },
+    {
+        "countryCode": "SLB",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Solomon Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Honiara",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sb.png"
+    },
+    {
+        "countryCode": "GRC",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Greece",
+        "countryNameTH": "",
+        "capitalNameEN": "Athens",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gr.png"
+    },
+    {
+        "countryCode": "NOR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Norway",
+        "countryNameTH": "",
+        "capitalNameEN": "Oslo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/no.png"
+    },
+    {
+        "countryCode": "JAM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Jamaica",
+        "countryNameTH": "",
+        "capitalNameEN": "Kingston",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/jm.png"
+    },
+    {
+        "countryCode": "TZA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Tanzania",
+        "countryNameTH": "",
+        "capitalNameEN": "Dodoma",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tz.png"
+    },
+    {
+        "countryCode": "BOL",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Bolivia",
+        "countryNameTH": "",
+        "capitalNameEN": "Sucre",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bo.png"
+    },
+    {
+        "countryCode": "CYP",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Cyprus",
+        "countryNameTH": "",
+        "capitalNameEN": "Nicosia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cy.png"
+    },
+    {
+        "countryCode": "MNG",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Mongolia",
+        "countryNameTH": "",
+        "capitalNameEN": "Ulan Bator",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mn.png"
+    },
+    {
+        "countryCode": "MCO",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Monaco",
+        "countryNameTH": "",
+        "capitalNameEN": "Monaco",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mc.png"
+    },
+    {
+        "countryCode": "TUN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Tunisia",
+        "countryNameTH": "",
+        "capitalNameEN": "Tunis",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tn.png"
+    },
+    {
+        "countryCode": "ATF",
+        "continentNameEN": "Antarctica",
+        "continentNameTH": "แอนตาร์กติกา",
+        "countryNameEN": "French Southern and Antarctic Lands",
+        "countryNameTH": "",
+        "capitalNameEN": "Port-aux-Français",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tf.png"
+    },
+    {
+        "countryCode": "SYR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Syria",
+        "countryNameTH": "",
+        "capitalNameEN": "Damascus",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sy.png"
+    },
+    {
+        "countryCode": "CHL",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Chile",
+        "countryNameTH": "",
+        "capitalNameEN": "Santiago",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cl.png"
+    },
+    {
+        "countryCode": "AZE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Azerbaijan",
+        "countryNameTH": "",
+        "capitalNameEN": "Baku",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/az.png"
+    },
+    {
+        "countryCode": "FRA",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "France",
+        "countryNameTH": "",
+        "capitalNameEN": "Paris",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fr.png"
+    },
+    {
+        "countryCode": "KOR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "South Korea",
+        "countryNameTH": "",
+        "capitalNameEN": "Seoul",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kr.png"
+    },
+    {
+        "countryCode": "GHA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Ghana",
+        "countryNameTH": "",
+        "capitalNameEN": "Accra",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gh.png"
+    },
+    {
+        "countryCode": "DNK",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Denmark",
+        "countryNameTH": "",
+        "capitalNameEN": "Copenhagen",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/dk.png"
+    },
+    {
+        "countryCode": "SXM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Sint Maarten",
+        "countryNameTH": "",
+        "capitalNameEN": "Philipsburg",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sx.png"
+    },
+    {
+        "countryCode": "AND",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Andorra",
+        "countryNameTH": "",
+        "capitalNameEN": "Andorra la Vella",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ad.png"
+    },
+    {
+        "countryCode": "CUW",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Curaçao",
+        "countryNameTH": "",
+        "capitalNameEN": "Willemstad",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cw.png"
+    },
+    {
+        "countryCode": "CHE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Switzerland",
+        "countryNameTH": "",
+        "capitalNameEN": "Bern",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ch.png"
+    },
+    {
+        "countryCode": "MKD",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "North Macedonia",
+        "countryNameTH": "",
+        "capitalNameEN": "Skopje",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mk.png"
+    },
+    {
+        "countryCode": "SSD",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "South Sudan",
+        "countryNameTH": "",
+        "capitalNameEN": "Juba",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ss.png"
+    },
+    {
+        "countryCode": "HTI",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Haiti",
+        "countryNameTH": "",
+        "capitalNameEN": "Port-au-Prince",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ht.png"
+    },
+    {
+        "countryCode": "PER",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Peru",
+        "countryNameTH": "",
+        "capitalNameEN": "Lima",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pe.png"
+    },
+    {
+        "countryCode": "GNB",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Guinea-Bissau",
+        "countryNameTH": "",
+        "capitalNameEN": "Bissau",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gw.png"
+    },
+    {
+        "countryCode": "CZE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Czechia",
+        "countryNameTH": "",
+        "capitalNameEN": "Prague",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cz.png"
+    },
+    {
+        "countryCode": "PRT",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Portugal",
+        "countryNameTH": "",
+        "capitalNameEN": "Lisbon",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pt.png"
+    },
+    {
+        "countryCode": "GAB",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Gabon",
+        "countryNameTH": "",
+        "capitalNameEN": "Libreville",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ga.png"
+    },
+    {
+        "countryCode": "MEX",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Mexico",
+        "countryNameTH": "",
+        "capitalNameEN": "Mexico City",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mx.png"
+    },
+    {
+        "countryCode": "ITA",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Italy",
+        "countryNameTH": "",
+        "capitalNameEN": "Rome",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/it.png"
+    },
+    {
+        "countryCode": "FIN",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Finland",
+        "countryNameTH": "",
+        "capitalNameEN": "Helsinki",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fi.png"
+    },
+    {
+        "countryCode": "ZWE",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Zimbabwe",
+        "countryNameTH": "",
+        "capitalNameEN": "Harare",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/zw.png"
+    },
+    {
+        "countryCode": "ESP",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Spain",
+        "countryNameTH": "",
+        "capitalNameEN": "Madrid",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/es.png"
+    },
+    {
+        "countryCode": "JPN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Japan",
+        "countryNameTH": "",
+        "capitalNameEN": "Tokyo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/jp.png"
+    },
+    {
+        "countryCode": "SYC",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Seychelles",
+        "countryNameTH": "",
+        "capitalNameEN": "Victoria",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sc.png"
+    },
+    {
+        "countryCode": "ALB",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Albania",
+        "countryNameTH": "",
+        "capitalNameEN": "Tirana",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/al.png"
+    },
+    {
+        "countryCode": "MDA",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Moldova",
+        "countryNameTH": "",
+        "capitalNameEN": "Chișinău",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/md.png"
+    },
+    {
+        "countryCode": "GTM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Guatemala",
+        "countryNameTH": "",
+        "capitalNameEN": "Guatemala City",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gt.png"
+    },
+    {
+        "countryCode": "DEU",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Germany",
+        "countryNameTH": "",
+        "capitalNameEN": "Berlin",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/de.png"
+    },
+    {
+        "countryCode": "GLP",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Guadeloupe",
+        "countryNameTH": "",
+        "capitalNameEN": "Basse-Terre",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gp.png"
+    },
+    {
+        "countryCode": "BGR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Bulgaria",
+        "countryNameTH": "",
+        "capitalNameEN": "Sofia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bg.png"
+    },
+    {
+        "countryCode": "PRY",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Paraguay",
+        "countryNameTH": "",
+        "capitalNameEN": "Asunción",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/py.png"
+    },
+    {
+        "countryCode": "ERI",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Eritrea",
+        "countryNameTH": "",
+        "capitalNameEN": "Asmara",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/er.png"
+    },
+    {
+        "countryCode": "SDN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Sudan",
+        "countryNameTH": "",
+        "capitalNameEN": "Khartoum",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sd.png"
+    },
+    {
+        "countryCode": "GNQ",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Equatorial Guinea",
+        "countryNameTH": "",
+        "capitalNameEN": "Malabo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gq.png"
+    },
+    {
+        "countryCode": "COL",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Colombia",
+        "countryNameTH": "",
+        "capitalNameEN": "Bogotá",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/co.png"
+    },
+    {
+        "countryCode": "NGA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Nigeria",
+        "countryNameTH": "",
+        "capitalNameEN": "Abuja",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ng.png"
+    },
+    {
+        "countryCode": "MNE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Montenegro",
+        "countryNameTH": "",
+        "capitalNameEN": "Podgorica",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/me.png"
+    },
+    {
+        "countryCode": "NPL",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Nepal",
+        "countryNameTH": "",
+        "capitalNameEN": "Kathmandu",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/np.png"
+    },
+    {
+        "countryCode": "BRN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Brunei",
+        "countryNameTH": "",
+        "capitalNameEN": "Bandar Seri Begawan",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bn.png"
+    },
+    {
+        "countryCode": "AUT",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Austria",
+        "countryNameTH": "",
+        "capitalNameEN": "Vienna",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/at.png"
+    },
+    {
+        "countryCode": "TCA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Turks and Caicos Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Cockburn Town",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tc.png"
+    },
+    {
+        "countryCode": "BHS",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Bahamas",
+        "countryNameTH": "",
+        "capitalNameEN": "Nassau",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bs.png"
+    },
+    {
+        "countryCode": "GBR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "United Kingdom",
+        "countryNameTH": "",
+        "capitalNameEN": "London",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gb.png"
+    },
+    {
+        "countryCode": "IOT",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "British Indian Ocean Territory",
+        "countryNameTH": "",
+        "capitalNameEN": "Diego Garcia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/io.png"
+    },
+    {
+        "countryCode": "LBR",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Liberia",
+        "countryNameTH": "",
+        "capitalNameEN": "Monrovia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lr.png"
+    },
+    {
+        "countryCode": "AIA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Anguilla",
+        "countryNameTH": "",
+        "capitalNameEN": "The Valley",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ai.png"
+    },
+    {
+        "countryCode": "CAF",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Central African Republic",
+        "countryNameTH": "",
+        "capitalNameEN": "Bangui",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cf.png"
+    },
+    {
+        "countryCode": "DZA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Algeria",
+        "countryNameTH": "",
+        "capitalNameEN": "Algiers",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/dz.png"
+    },
+    {
+        "countryCode": "LCA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Lucia",
+        "countryNameTH": "",
+        "capitalNameEN": "Castries",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lc.png"
+    },
+    {
+        "countryCode": "ROU",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Romania",
+        "countryNameTH": "",
+        "capitalNameEN": "Bucharest",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ro.png"
+    },
+    {
+        "countryCode": "ARE",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "United Arab Emirates",
+        "countryNameTH": "",
+        "capitalNameEN": "Abu Dhabi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ae.png"
+    },
+    {
+        "countryCode": "MAR",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Morocco",
+        "countryNameTH": "",
+        "capitalNameEN": "Rabat",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ma.png"
+    },
+    {
+        "countryCode": "MNP",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Northern Mariana Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Saipan",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mp.png"
+    },
+    {
+        "countryCode": "UMI",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "United States Minor Outlying Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Washington DC",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/um.png"
+    },
+    {
+        "countryCode": "BWA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Botswana",
+        "countryNameTH": "",
+        "capitalNameEN": "Gaborone",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bw.png"
+    },
+    {
+        "countryCode": "LTU",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Lithuania",
+        "countryNameTH": "",
+        "capitalNameEN": "Vilnius",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/lt.png"
+    },
+    {
+        "countryCode": "BES",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Caribbean Netherlands",
+        "countryNameTH": "",
+        "capitalNameEN": "Kralendijk",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bq.png"
+    },
+    {
+        "countryCode": "CPV",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Cape Verde",
+        "countryNameTH": "",
+        "capitalNameEN": "Praia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/cv.png"
+    },
+    {
+        "countryCode": "USA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "United States",
+        "countryNameTH": "",
+        "capitalNameEN": "Washington, D.C.",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/us.png"
+    },
+    {
+        "countryCode": "AUS",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Australia",
+        "countryNameTH": "",
+        "capitalNameEN": "Canberra",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/au.png"
+    },
+    {
+        "countryCode": "GUM",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Guam",
+        "countryNameTH": "",
+        "capitalNameEN": "Hagåtña",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gu.png"
+    },
+    {
+        "countryCode": "TON",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Tonga",
+        "countryNameTH": "",
+        "capitalNameEN": "Nuku'alofa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/to.png"
+    },
+    {
+        "countryCode": "AFG",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Afghanistan",
+        "countryNameTH": "",
+        "capitalNameEN": "Kabul",
+        "capitalNameTH": "",
+        "flagURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/320px-Flag_of_the_Taliban.svg.png"
+    },
+    {
+        "countryCode": "FLK",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Falkland Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Stanley",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fk.png"
+    },
+    {
+        "countryCode": "NRU",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Nauru",
+        "countryNameTH": "",
+        "capitalNameEN": "Yaren",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nr.png"
+    },
+    {
+        "countryCode": "COK",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Cook Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Avarua",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ck.png"
+    },
+    {
+        "countryCode": "HUN",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Hungary",
+        "countryNameTH": "",
+        "capitalNameEN": "Budapest",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/hu.png"
+    },
+    {
+        "countryCode": "MRT",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Mauritania",
+        "countryNameTH": "",
+        "capitalNameEN": "Nouakchott",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mr.png"
+    },
+    {
+        "countryCode": "SVN",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Slovenia",
+        "countryNameTH": "",
+        "capitalNameEN": "Ljubljana",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/si.png"
+    },
+    {
+        "countryCode": "TCD",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Chad",
+        "countryNameTH": "",
+        "capitalNameEN": "N'Djamena",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/td.png"
+    },
+    {
+        "countryCode": "VAT",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Vatican City",
+        "countryNameTH": "",
+        "capitalNameEN": "Vatican City",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/va.png"
+    },
+    {
+        "countryCode": "BEN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Benin",
+        "countryNameTH": "",
+        "capitalNameEN": "Porto-Novo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bj.png"
+    },
+    {
+        "countryCode": "SGP",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Singapore",
+        "countryNameTH": "",
+        "capitalNameEN": "Singapore",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sg.png"
+    },
+    {
+        "countryCode": "MLT",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Malta",
+        "countryNameTH": "",
+        "capitalNameEN": "Valletta",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mt.png"
+    },
+    {
+        "countryCode": "VCT",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Saint Vincent and the Grenadines",
+        "countryNameTH": "",
+        "capitalNameEN": "Kingstown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/vc.png"
+    },
+    {
+        "countryCode": "MHL",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Marshall Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Majuro",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mh.png"
+    },
+    {
+        "countryCode": "THA",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Thailand",
+        "countryNameTH": "",
+        "capitalNameEN": "Bangkok",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/th.png"
+    },
+    {
+        "countryCode": "LIE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Liechtenstein",
+        "countryNameTH": "",
+        "capitalNameEN": "Vaduz",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/li.png"
+    },
+    {
+        "countryCode": "IRL",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Ireland",
+        "countryNameTH": "",
+        "capitalNameEN": "Dublin",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ie.png"
+    },
+    {
+        "countryCode": "MDV",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Maldives",
+        "countryNameTH": "",
+        "capitalNameEN": "Malé",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mv.png"
+    },
+    {
+        "countryCode": "VNM",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Vietnam",
+        "countryNameTH": "",
+        "capitalNameEN": "Hanoi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/vn.png"
+    },
+    {
+        "countryCode": "ARM",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Armenia",
+        "countryNameTH": "",
+        "capitalNameEN": "Yerevan",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/am.png"
+    },
+    {
+        "countryCode": "PAK",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Pakistan",
+        "countryNameTH": "",
+        "capitalNameEN": "Islamabad",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pk.png"
+    },
+    {
+        "countryCode": "CIV",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Ivory Coast",
+        "countryNameTH": "",
+        "capitalNameEN": "Yamoussoukro",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ci.png"
+    },
+    {
+        "countryCode": "RUS",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Russia",
+        "countryNameTH": "",
+        "capitalNameEN": "Moscow",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ru.png"
+    },
+    {
+        "countryCode": "MTQ",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Martinique",
+        "countryNameTH": "",
+        "capitalNameEN": "Fort-de-France",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mq.png"
+    },
+    {
+        "countryCode": "BVT",
+        "continentNameEN": "Antarctica",
+        "continentNameTH": "แอนตาร์กติกา",
+        "countryNameEN": "Bouvet Island",
+        "countryNameTH": "",
+        "capitalNameEN": "",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bv.png"
+    },
+    {
+        "countryCode": "TLS",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Timor-Leste",
+        "countryNameTH": "",
+        "capitalNameEN": "Dili",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tl.png"
+    },
+    {
+        "countryCode": "NIC",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Nicaragua",
+        "countryNameTH": "",
+        "capitalNameEN": "Managua",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ni.png"
+    },
+    {
+        "countryCode": "PNG",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Papua New Guinea",
+        "countryNameTH": "",
+        "capitalNameEN": "Port Moresby",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pg.png"
+    },
+    {
+        "countryCode": "EGY",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Egypt",
+        "countryNameTH": "",
+        "capitalNameEN": "Cairo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/eg.png"
+    },
+    {
+        "countryCode": "JOR",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Jordan",
+        "countryNameTH": "",
+        "capitalNameEN": "Amman",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/jo.png"
+    },
+    {
+        "countryCode": "URY",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Uruguay",
+        "countryNameTH": "",
+        "capitalNameEN": "Montevideo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/uy.png"
+    },
+    {
+        "countryCode": "BFA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Burkina Faso",
+        "countryNameTH": "",
+        "capitalNameEN": "Ouagadougou",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bf.png"
+    },
+    {
+        "countryCode": "KHM",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Cambodia",
+        "countryNameTH": "",
+        "capitalNameEN": "Phnom Penh",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kh.png"
+    },
+    {
+        "countryCode": "ETH",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Ethiopia",
+        "countryNameTH": "",
+        "capitalNameEN": "Addis Ababa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/et.png"
+    },
+    {
+        "countryCode": "KIR",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Kiribati",
+        "countryNameTH": "",
+        "capitalNameEN": "South Tarawa",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ki.png"
+    },
+    {
+        "countryCode": "BTN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Bhutan",
+        "countryNameTH": "",
+        "capitalNameEN": "Thimphu",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bt.png"
+    },
+    {
+        "countryCode": "DOM",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Dominican Republic",
+        "countryNameTH": "",
+        "capitalNameEN": "Santo Domingo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/do.png"
+    },
+    {
+        "countryCode": "SUR",
+        "continentNameEN": "South America",
+        "continentNameTH": "อเมริกาใต้",
+        "countryNameEN": "Suriname",
+        "countryNameTH": "",
+        "capitalNameEN": "Paramaribo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sr.png"
+    },
+    {
+        "countryCode": "BGD",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Bangladesh",
+        "countryNameTH": "",
+        "capitalNameEN": "Dhaka",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bd.png"
+    },
+    {
+        "countryCode": "BRB",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Barbados",
+        "countryNameTH": "",
+        "capitalNameEN": "Bridgetown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bb.png"
+    },
+    {
+        "countryCode": "PRK",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "North Korea",
+        "countryNameTH": "",
+        "capitalNameEN": "Pyongyang",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/kp.png"
+    },
+    {
+        "countryCode": "GRL",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Greenland",
+        "countryNameTH": "",
+        "capitalNameEN": "Nuuk",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gl.png"
+    },
+    {
+        "countryCode": "BEL",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Belgium",
+        "countryNameTH": "",
+        "capitalNameEN": "Brussels",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/be.png"
+    },
+    {
+        "countryCode": "PLW",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Palau",
+        "countryNameTH": "",
+        "capitalNameEN": "Ngerulmud",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pw.png"
+    },
+    {
+        "countryCode": "NFK",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Norfolk Island",
+        "countryNameTH": "",
+        "capitalNameEN": "Kingston",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/nf.png"
+    },
+    {
+        "countryCode": "SGS",
+        "continentNameEN": "Antarctica",
+        "continentNameTH": "แอนตาร์กติกา",
+        "countryNameEN": "South Georgia",
+        "countryNameTH": "",
+        "capitalNameEN": "King Edward Point",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gs.png"
+    },
+    {
+        "countryCode": "PHL",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Philippines",
+        "countryNameTH": "",
+        "capitalNameEN": "Manila",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ph.png"
+    },
+    {
+        "countryCode": "IND",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "India",
+        "countryNameTH": "",
+        "capitalNameEN": "New Delhi",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/in.png"
+    },
+    {
+        "countryCode": "IDN",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Indonesia",
+        "countryNameTH": "",
+        "capitalNameEN": "Jakarta",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/id.png"
+    },
+    {
+        "countryCode": "VIR",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "United States Virgin Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Charlotte Amalie",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/vi.png"
+    },
+    {
+        "countryCode": "DMA",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Dominica",
+        "countryNameTH": "",
+        "capitalNameEN": "Roseau",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/dm.png"
+    },
+    {
+        "countryCode": "RWA",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Rwanda",
+        "countryNameTH": "",
+        "capitalNameEN": "Kigali",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/rw.png"
+    },
+    {
+        "countryCode": "MDG",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Madagascar",
+        "countryNameTH": "",
+        "capitalNameEN": "Antananarivo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mg.png"
+    },
+    {
+        "countryCode": "HKG",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Hong Kong",
+        "countryNameTH": "",
+        "capitalNameEN": "City of Victoria",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/hk.png"
+    },
+    {
+        "countryCode": "WSM",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Samoa",
+        "countryNameTH": "",
+        "capitalNameEN": "Apia",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ws.png"
+    },
+    {
+        "countryCode": "FRO",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Faroe Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Tórshavn",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/fo.png"
+    },
+    {
+        "countryCode": "PCN",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Pitcairn Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Adamstown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/pn.png"
+    },
+    {
+        "countryCode": "ATG",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Antigua and Barbuda",
+        "countryNameTH": "",
+        "capitalNameEN": "Saint John's",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ag.png"
+    },
+    {
+        "countryCode": "ALA",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Åland Islands",
+        "countryNameTH": "",
+        "capitalNameEN": "Mariehamn",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ax.png"
+    },
+    {
+        "countryCode": "SWE",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Sweden",
+        "countryNameTH": "",
+        "capitalNameEN": "Stockholm",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/se.png"
+    },
+    {
+        "countryCode": "MOZ",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Mozambique",
+        "countryNameTH": "",
+        "capitalNameEN": "Maputo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/mz.png"
+    },
+    {
+        "countryCode": "UZB",
+        "continentNameEN": "Asia",
+        "continentNameTH": "เอเชีย",
+        "countryNameEN": "Uzbekistan",
+        "countryNameTH": "",
+        "capitalNameEN": "Tashkent",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/uz.png"
+    },
+    {
+        "countryCode": "ATA",
+        "continentNameEN": "Antarctica",
+        "continentNameTH": "แอนตาร์กติกา",
+        "countryNameEN": "Antarctica",
+        "countryNameTH": "",
+        "capitalNameEN": "",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/aq.png"
+    },
+    {
+        "countryCode": "WLF",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Wallis and Futuna",
+        "countryNameTH": "",
+        "capitalNameEN": "Mata-Utu",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/wf.png"
+    },
+    {
+        "countryCode": "UKR",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Ukraine",
+        "countryNameTH": "",
+        "capitalNameEN": "Kyiv",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/ua.png"
+    },
+    {
+        "countryCode": "BLZ",
+        "continentNameEN": "North America",
+        "continentNameTH": "อเมริกาเหนือ",
+        "countryNameEN": "Belize",
+        "countryNameTH": "",
+        "capitalNameEN": "Belmopan",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/bz.png"
+    },
+    {
+        "countryCode": "SHN",
+        "continentNameEN": "Africa",
+        "continentNameTH": "แอฟริกา",
+        "countryNameEN": "Saint Helena, Ascension and Tristan da Cunha",
+        "countryNameTH": "",
+        "capitalNameEN": "Jamestown",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/sh.png"
+    },
+    {
+        "countryCode": "GGY",
+        "continentNameEN": "Europe",
+        "continentNameTH": "ยุโรป",
+        "countryNameEN": "Guernsey",
+        "countryNameTH": "",
+        "capitalNameEN": "St. Peter Port",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/gg.png"
+    },
+    {
+        "countryCode": "TKL",
+        "continentNameEN": "Oceania",
+        "continentNameTH": "โอเชียเนีย",
+        "countryNameEN": "Tokelau",
+        "countryNameTH": "",
+        "capitalNameEN": "Fakaofo",
+        "capitalNameTH": "",
+        "flagURL": "https://flagcdn.com/w320/tk.png"
+    }
+]

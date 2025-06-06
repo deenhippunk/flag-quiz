@@ -1,0 +1,98 @@
+/* Space Pastel Theme */
+body {
+    /* background: linear-gradient(135deg, #2c3e50 0%, #4b79a1 100%); */ /* Deep space blue gradient - Old */
+    background-image: url("assets/images/atlas.jpg"); /* Keep world map, or change to a darker space theme if preferred */
+    background-size: cover; /* Cover the entire page */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat;
+    color: #EAEAEA; /* Light grey text for general readability on dark themes */
+    font-family: 'Sarabun', 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(10, 25, 47, 0.92); /* Very dark navy blue, almost opaque */
+    border: 1px solid #00A8E8; /* Bright cyan border for a stark contrast */
+    box-shadow: 0 8px 25px rgba(0, 168, 232, 0.3); /* Cyan glow effect */
+    border-radius: 15px;
+}
+
+.card-header {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker, more transparent header */
+    color: #FFD700; /* Gold/Bright Yellow for header text */
+    border-bottom: 1px solid #00A8E8; /* Cyan border */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#game-title {
+    color: #FF4081; /* Bright Pink/Magenta for title */
+    font-weight: bold;
+}
+
+#game-subtitle, #last-played-info p, #last-played-info strong {
+    color: #00E0FF; /* Bright Cyan for subtitle and info */
+}
+
+.card-body {
+    color: #CFD8DC; /* Lighter grey for body text, good contrast on dark blue */
+}
+
+#flag-image {
+    min-height: 150px; /* Ensure space is reserved even if image is small */
+    background-color: rgba(40, 55, 71, 0.7); /* Darker placeholder for flag */
+    border-radius: 8px;
+}
+
+.btn-option {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    font-weight: 600; /* Make text bolder */
+    color: #FFFFFF; /* White text for high contrast on dark buttons */
+    background-color: rgba(44, 62, 80, 0.75); /* Dark Slate Blue, slightly transparent */
+    border-color: #00A8E8; /* Bright Cyan border, consistent with card */
+}
+
+.btn-primary, #start-new-game-button {
+    background-color: #F9A825; /* Vibrant Amber/Orange */
+    border-color: #F57F17; /* Darker Amber */
+    color: #1A237E; /* Dark Indigo text for contrast */
+}
+.btn-primary:hover, #start-new-game-button:hover {
+    background-color: #FF8F00; /* Brighter Amber on hover */
+    border-color: #F57F17;
+}
+
+.btn-info {
+    background-color: #00BCD4; /* Bright Cyan */
+    border-color: #00ACC1;
+    color: #1A237E; /* Dark Indigo text */
+}
+.btn-info:hover {
+    background-color: #00ACC1;
+    border-color: #0097A7;
+}
+
+.btn-warning {
+    background-color: #FFEB3B; /* Bright Yellow */
+    border-color: #FDD835;
+    color: #3E2723; /* Dark Brown text */
+}
+.btn-warning:hover {
+    background-color: #FDD835;
+    border-color: #FBC02D;
+}
+
+/* Feedback styling */
+.feedback-correct {
+    color: #76FF03; /* Bright Lime Green */
+    font-weight: bold;
+}
+
+.feedback-incorrect {
+    color: #FF1744; /* Bright Red/Pink */
+    font-weight: bold;
+}
