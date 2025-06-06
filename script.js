@@ -26,6 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastScoreElement = document.getElementById('last-score');
     const gameSubtitleElement = document.getElementById('game-subtitle');
 
+    // Sound elements (ensure these paths are correct)
+    const correctSound = new Audio('assets/sounds/correct.mp3');
+    const incorrectSound = new Audio('assets/sounds/incorrect.mp3');
+    const levelUpSound = new Audio('assets/sounds/level-up.mp3');
+    const gameIntroSound = new Audio('assets/sounds/game-intro.mp3');
+    const gameStartSound = new Audio('assets/sounds/game-start.mp3');
+
+    // Set intro sound to loop
+    gameIntroSound.loop = true;
+    gameIntroSound.volume = 0.10; // Adjust volume if needed
+
     let allLoadedCountries = []; // All countries after initial load and shuffle
     let currentCorrectAnswer = null;
 
@@ -103,6 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateTotalScoreDisplay();
 
         gameActive = false;
+
+        gameIntroSound.pause(); // Stop intro sound
+        gameStartSound.play().catch(e => console.log("Game start sound play failed:", e)); // Play game start sound
         // Hide initial screen elements, show game elements
         setGameScreenActive(true);
         startNextLevel();
@@ -143,6 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             // Should not happen if savedState.currentLevel > 0, but as a fallback:
+            gameIntroSound.pause(); // Stop intro sound
+            gameStartSound.play().catch(e => console.log("Game start sound play failed:", e)); // Play game start sound
+            setGameScreenActive(true); // Ensure game screen is active
             startNewGame();
 
         }
@@ -204,13 +221,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show initial screen elements, hide game elements
             document.getElementById('game-stats').style.display = 'none';
             flagImageElement.style.display = 'none';
-            optionsContainerElement.style.display = 'none';
+            optionsContainerElement.innerHTML = ''; // Clear previous options
+            optionsContainerElement.style.display = 'none'; // Hide the container
             feedbackElement.innerHTML = ''; // Clear feedback
             questionInfoElement.style.display = 'none';
             levelProgressStatsElement.style.display = 'none';
             exitGameButton.style.display = 'none';
             resetLevelButton.style.display = 'none';
             startNextButton.style.display = 'none'; // Hide the game's next button
+
+            // Stop other game sounds before starting intro sound
+            gameStartSound.pause();
+            correctSound.pause();
+            incorrectSound.pause();
+            levelUpSound.pause();
+
+            gameIntroSound.currentTime = 0; // Ensure it starts from the beginning
+            gameIntroSound.play().catch(e => console.log("Intro sound autoplay blocked on initial screen:", e));
+
             startNewGameButton.style.display = 'inline-block'; // Show "Start New Game"
         }
     }
@@ -363,14 +391,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 levelScore++; // Only increment level score if it's the first time getting this question right
                 totalAccumulatedScore++;
                 correctlyAnsweredInLevelOverall.add(currentCorrectAnswer.countryCode);
+                correctSound.play();
             }
             feedbackElement.innerHTML = '<span class="feedback-correct">ถูกต้อง!</span>';
             // If it was in incorrectlyAnsweredInCurrentRound, it's now correct, so it won't be added back.
         } else {
+            incorrectSound.play(); // Play incorrect sound
             feedbackElement.innerHTML = `<span class="feedback-incorrect">ผิด!</span> คำตอบที่ถูกต้องคือ: ${getCountryName(currentCorrectAnswer)}`;
             if (!incorrectlyAnsweredInCurrentRound.some(c => c.countryCode === currentCorrectAnswer.countryCode) &&
                 !correctlyAnsweredInLevelOverall.has(currentCorrectAnswer.countryCode)) {
                 // Add to retry list only if not already there from this round and not already marked as overall correct
+                // Ensure we add the full country object, not just the code
                 incorrectlyAnsweredInCurrentRound.push(currentCorrectAnswer);
             }
         }
@@ -463,6 +494,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startNextButton.disabled = false;
         resetLevelButton.disabled = true; // Can't reset once level is officially "ended" this way
         saveGameState(); // Save progress after completing a level
+        if (currentLevel < maxLevels) { levelUpSound.play(); } // Play level up sound if there's a next level
     }
 
     function resetCurrentLevel() {
@@ -495,6 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         gameActive = false;
         setupInitialScreenUI(); // Reset UI to initial screen
+        // setupInitialScreenUI will attempt to play intro sound
         gameSubtitleElement.innerHTML = 'เกมถูกบันทึกแล้ว!'; // Update subtitle
         const savedState = loadGameState(); // Check if state was actually saved
         if (savedState && savedState.currentLevel > 0) {
@@ -528,6 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedState = loadGameState();
         if (savedState) {
             setGameScreenActive(true); // Transition to game screen
+            gameIntroSound.pause(); // Stop intro sound
             resumeGame(savedState);
             continueButton.style.display = 'none';
         } else {
