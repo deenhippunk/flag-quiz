@@ -225,20 +225,43 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         if (text !== '') {
-            console.log("Speaking:", text, lang);
+            console.log(`Attempting to speak: "${text}" with lang: "${lang}"`);
             const utterThis = new SpeechSynthesisUtterance(text);
             utterThis.onend = function (event) {
                 console.log('SpeechSynthesisUtterance.onend');
             }
             utterThis.onerror = function (event) {
-                console.error('SpeechSynthesisUtterance.onerror', event);
+                console.error('SpeechSynthesisUtterance.onerror', event.error, event);
             }
-            let selectedVoice = voices.find(voice => voice.lang === lang);
-            if (!selectedVoice && lang.includes('-')) { // Try finding a more generic voice if specific (e.g. en-US) is not found
-                selectedVoice = voices.find(voice => voice.lang.startsWith(lang.split('-')[0]));
+
+            // Set language directly on utterance first
+            utterThis.lang = lang;
+
+            // Voice selection (can be tricky on iOS)
+            let selectedVoice = null;
+            if (voices && voices.length > 0) {
+                // Try exact match first
+                selectedVoice = voices.find(voice => voice.lang === lang && voice.default); // Prefer default voice for the lang
+                if (!selectedVoice) {
+                    selectedVoice = voices.find(voice => voice.lang === lang);
+                }
+                // If still no match, try matching the primary language part (e.g., 'en' for 'en-US')
+                if (!selectedVoice && lang.includes('-')) {
+                    const langPrimary = lang.split('-')[0];
+                    selectedVoice = voices.find(voice => voice.lang === langPrimary && voice.default);
+                    if (!selectedVoice) {
+                        selectedVoice = voices.find(voice => voice.lang === langPrimary);
+                    }
+                }
             }
-            if (selectedVoice) utterThis.voice = selectedVoice;
-            else console.warn(`No specific voice found for ${lang}, using default.`);
+
+            if (selectedVoice) {
+                utterThis.voice = selectedVoice;
+                console.log("Using voice:", selectedVoice.name, selectedVoice.lang);
+            } else {
+                console.warn(`No specific voice found for lang "${lang}". Using browser default for this language.`);
+            }
+
             synth.speak(utterThis);
         }
     }
