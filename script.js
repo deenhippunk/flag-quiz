@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- DOM Elements ---
     const flagImageElement = document.getElementById('flag-image');
     const optionsContainerElement = document.getElementById('options-container');
     const levelScoreElement = document.getElementById('level-score');
@@ -26,42 +27,222 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastScoreElement = document.getElementById('last-score');
     const gameSubtitleElement = document.getElementById('game-subtitle');
 
-    // Sound elements (ensure these paths are correct)
-    const correctSound = new Audio('assets/sounds/correct.mp3');
-    const incorrectSound = new Audio('assets/sounds/incorrect.mp3');
-    const levelUpSound = new Audio('assets/sounds/level-up.mp3');
-    const gameIntroSound = new Audio('assets/sounds/game-intro.mp3');
-    const gameStartSound = new Audio('assets/sounds/game-start.mp3');
+    // --- Constants ---
+    const QUESTIONS_PER_LEVEL = 10;
+    const MIN_COUNTRIES_FOR_GAME = 4;
+    const GAME_STATE_KEY = 'flagQuizGameState';
 
-    // Set intro sound to loop
-    gameIntroSound.loop = true;
-    gameIntroSound.volume = 0.10; // Adjust volume if needed
+    // --- Audio Management ---
+    const sounds = {
+        correct: new Audio('assets/sounds/correct.mp3'),
+        incorrect: new Audio('assets/sounds/incorrect.mp3'),
+        levelUp: new Audio('assets/sounds/level-up.mp3'),
+        gameStart: new Audio('assets/sounds/game-start.mp3'),
+        gameIntro: new Audio('assets/sounds/game-intro.mp3')
+    };
+    if (sounds.gameIntro) {
+        sounds.gameIntro.loop = true;
+        sounds.gameIntro.volume = 0.1; // Adjust as needed
+    }
 
-    let allLoadedCountries = []; // All countries after initial load and shuffle
+
+    // --- Game State Variables ---
+    let allLoadedCountries = [];
     let currentCorrectAnswer = null;
-
     let currentLevel = 0;
     let totalAccumulatedScore = 0;
     let levelScore = 0;
-    // let questionsAnsweredInLevel = 0; // This tracks attempts, not essential for state restoration of question queue
-
-    const QUESTIONS_PER_LEVEL = 10; // จำนวนคำถามต่อ Level
-    const MIN_COUNTRIES_FOR_GAME = 4; // Minimum countries needed to start the game
     let gameActive = false;
     let maxLevels = 0;
 
-    // State for current level progression with retries
-    let countriesForCurrentLevelDefinition = []; // Static list of questions for the current level
-    let questionsToAskInCurrentRound = []; // Questions to be asked in the current pass/round
-    let incorrectlyAnsweredInCurrentRound = []; // Questions answered incorrectly in this round, to be re-asked
-    let correctlyAnsweredInLevelOverall = new Set(); // countryCodes of questions answered correctly in this level (eventually)
+    let countriesForCurrentLevelDefinition = [];
+    let questionsToAskInCurrentRound = [];
+    let incorrectlyAnsweredInCurrentRound = [];
+    let correctlyAnsweredInLevelOverall = new Set();
 
-    const GAME_STATE_KEY = 'flagQuizGameState';
+    // --- Web Speech API for Text-to-Speech ---
+    let voices = [];
+    const synth = window.speechSynthesis;
 
-    // ---- Game State Management (Local Storage) ----
+    function populateVoiceList() {
+        voices = synth.getVoices();
+        console.log("Available voices:", voices);
+    }
 
+    populateVoiceList();
+    if (synth.onvoiceschanged !== undefined) {
+        synth.onvoiceschanged = populateVoiceList;
+    }
 
+    // --- Local Storage Manager Object ---
+    const storageManager = {
+        saveState: function() {
+            const gameState = {
+                currentLevel: currentLevel,
+                totalAccumulatedScore: totalAccumulatedScore,
+                activeLevelState: gameActive && currentLevel > 0 ? {
+                    levelScore: levelScore,
+                    countriesForCurrentLevelDefinition: countriesForCurrentLevelDefinition,
+                    questionsToAskInCurrentRound: questionsToAskInCurrentRound,
+                    incorrectlyAnsweredInCurrentRound: incorrectlyAnsweredInCurrentRound,
+                    correctlyAnsweredInLevelOverall: Array.from(correctlyAnsweredInLevelOverall),
+                } : null
+            };
+            localStorage.setItem(GAME_STATE_KEY, JSON.stringify(gameState));
+            console.log("Game state saved.");
+        },
+        loadState: function() {
+            const savedState = localStorage.getItem(GAME_STATE_KEY);
+            if (savedState) {
+                try {
+                    return JSON.parse(savedState);
+                } catch (e) {
+                    console.error("Error parsing saved game state:", e);
+                    this.clearState();
+                    return null;
+                }
+            }
+            return null;
+        },
+        clearState: function() {
+            localStorage.removeItem(GAME_STATE_KEY);
+            console.log("Game state cleared.");
+        }
+    };
 
+    // --- UI Manager Object ---
+    const uiManager = {
+        setGameScreenActive: function(isActive) {
+            if (isActive) {
+                gameSubtitleElement.textContent = "นี่คือธงชาติของประเทศอะไร?";
+                lastPlayedInfoElement.style.display = 'none';
+                startNewGameButton.style.display = 'none';
+                continueButton.style.display = 'none';
+
+                document.getElementById('game-stats').style.display = 'block';
+                flagImageElement.style.display = 'block';
+                optionsContainerElement.style.display = 'grid';
+                feedbackElement.style.display = 'block';
+                levelProgressStatsElement.style.display = 'block';
+                exitGameButton.style.display = 'inline-block';
+                resetLevelButton.style.display = 'inline-block';
+                startNextButton.style.display = 'inline-block';
+            } else {
+                document.getElementById('game-stats').style.display = 'none';
+                flagImageElement.style.display = 'none';
+                optionsContainerElement.innerHTML = '';
+                optionsContainerElement.style.display = 'none';
+                feedbackElement.innerHTML = '';
+                questionInfoElement.style.display = 'none';
+                levelProgressStatsElement.style.display = 'none';
+                exitGameButton.style.display = 'none';
+                resetLevelButton.style.display = 'none';
+                startNextButton.style.display = 'none';
+
+                Object.values(sounds).forEach(sound => {
+                    if (sound && sound !== sounds.gameIntro && sound.pause) sound.pause();
+                });
+                if (sounds.gameIntro) {
+                    sounds.gameIntro.currentTime = 0;
+                    sounds.gameIntro.play().catch(e => console.log("Intro sound autoplay blocked on initial screen:", e));
+                }
+                startNewGameButton.style.display = 'inline-block';
+            }
+        },
+        setupInitialScreen: function() {
+            this.updateLevelDisplay(currentLevel > 0 ? currentLevel : "-");
+            this.updateLevelScore(levelScore);
+            this.updateTotalScore(totalAccumulatedScore);
+            this.setGameScreenActive(false);
+        },
+        updateLevelDisplay: function(level) {
+            currentLevelElement.textContent = level;
+        },
+        updateLevelScore: function(score) {
+            levelScoreElement.textContent = score;
+        },
+        updateTotalScore: function(score) {
+            totalAccumulatedScoreElement.textContent = score;
+        },
+        updateQuestionInfo: function(currentQ, totalQ, level) {
+            currentQuestionNumberElement.textContent = currentQ;
+            totalQuestionsInLevelElement.textContent = totalQ;
+            questionLevelNumberElement.textContent = level;
+            questionInfoElement.style.display = 'block';
+        },
+        updateLevelProgress: function(correctAnswers, totalQuestionsInLevelDef) {
+            const totalQ = totalQuestionsInLevelDef > 0 ? totalQuestionsInLevelDef : QUESTIONS_PER_LEVEL;
+            correctInLevelCountElement.textContent = correctAnswers;
+            totalUniqueQuestionsInLevelElement.textContent = totalQ;
+            const progressPercentage = totalQ > 0 ? (correctAnswers / totalQ) * 100 : 0;
+            levelProgressBarElement.style.width = `${progressPercentage}%`;
+            levelProgressBarElement.setAttribute('aria-valuenow', progressPercentage);
+        },
+        displayOptions: function(options, answerHandler) {
+            optionsContainerElement.innerHTML = '';
+            options.forEach(country => {
+                const button = document.createElement('button');
+                button.classList.add('btn', 'btn-outline-secondary', 'btn-lg', 'btn-option');
+
+                const countryNameSpan = document.createElement('span');
+                countryNameSpan.textContent = getCountryName(country);
+                button.appendChild(countryNameSpan);
+
+                const speakButton = document.createElement('button');
+                speakButton.classList.add('btn', 'btn-sm', 'btn-light', 'ms-2');
+                speakButton.textContent = '🔊';
+                speakButton.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent triggering the answer selection
+                    // Determine language for speaking. Prioritize Thai if available, else English.
+                    let textToSpeak = country.countryNameTH && country.countryNameTH.trim() !== '' ? country.countryNameTH : country.countryNameEN;
+                    let langToSpeak = country.countryNameTH && country.countryNameTH.trim() !== '' ? 'th-TH' : 'en-US';
+                    
+                    // If only English name is available, ensure we use English for speaking
+                    if (!country.countryNameTH || country.countryNameTH.trim() === '') {
+                        textToSpeak = country.countryNameEN;
+                        langToSpeak = 'en-US';
+                    }
+                    speakText(textToSpeak, langToSpeak);
+                });
+                button.appendChild(speakButton);
+
+                button.addEventListener('click', () => answerHandler(country));
+                optionsContainerElement.appendChild(button);
+            });
+        },
+        showFeedback: function(message, isCorrect) {
+            feedbackElement.innerHTML = `<span class="feedback-${isCorrect ? 'correct' : 'incorrect'}">${message}</span>`;
+        },
+        disableOptionButtons: function() {
+            optionsContainerElement.querySelectorAll('button').forEach(btn => btn.disabled = true);
+        }
+    };
+
+    // --- Text-to-Speech Function ---
+    function speakText(text, lang) {
+        if (synth.speaking) {
+            console.error('SpeechSynthesis.speaking');
+            return;
+        }
+        if (text !== '') {
+            console.log("Speaking:", text, lang);
+            const utterThis = new SpeechSynthesisUtterance(text);
+            utterThis.onend = function (event) {
+                console.log('SpeechSynthesisUtterance.onend');
+            }
+            utterThis.onerror = function (event) {
+                console.error('SpeechSynthesisUtterance.onerror', event);
+            }
+            let selectedVoice = voices.find(voice => voice.lang === lang);
+            if (!selectedVoice && lang.includes('-')) { // Try finding a more generic voice if specific (e.g. en-US) is not found
+                selectedVoice = voices.find(voice => voice.lang.startsWith(lang.split('-')[0]));
+            }
+            if (selectedVoice) utterThis.voice = selectedVoice;
+            else console.warn(`No specific voice found for ${lang}, using default.`);
+            synth.speak(utterThis);
+        }
+    }
+    // --- Game Logic Functions ---
     async function loadCountries() {
         try {
             const response = await fetch('data/country.json');
@@ -69,21 +250,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             let countriesData = await response.json();
-            // Filter out countries with no flag or no Thai/English name
             countriesData = countriesData.filter(country =>
-                country.flagURL &&
-                (country.countryNameTH || country.countryNameEN)
+                country.flagURL && (country.countryNameTH || country.countryNameEN)
             );
             if (countriesData.length < MIN_COUNTRIES_FOR_GAME) {
                 feedbackElement.textContent = `ข้อมูลประเทศไม่เพียงพอสำหรับเริ่มเกม (ต้องการอย่างน้อย ${MIN_COUNTRIES_FOR_GAME} ประเทศ)`;
-                startNextButton.disabled = true;
+                startNewGameButton.disabled = true; // Disable start new game if not enough data
                 return;
             }
-            allLoadedCountries = shuffleArray(countriesData); // Shuffle once for varied level progression
+            allLoadedCountries = shuffleArray(countriesData);
             maxLevels = Math.ceil(allLoadedCountries.length / QUESTIONS_PER_LEVEL);
-            console.log('Country data loaded and shuffled:', allLoadedCountries.length, 'countries.', 'Max levels:', maxLevels);
-            
-            const savedState = loadGameState();
+            console.log('Country data loaded:', allLoadedCountries.length, 'countries. Max levels:', maxLevels);
+
+            const savedState = storageManager.loadState();
             if (savedState && savedState.currentLevel > 0) {
                 lastLevelElement.textContent = savedState.currentLevel;
                 lastScoreElement.textContent = savedState.totalAccumulatedScore;
@@ -95,36 +274,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 continueButton.style.display = 'none';
                 gameSubtitleElement.innerHTML = 'มาทดสอบความรู้รอบโลกกันเถอะ!';
             }
-            setupInitialScreenUI(); // Setup initial UI elements that don't depend on active game
+            uiManager.setupInitialScreen();
         } catch (error) {
             console.error('Error loading country data:', error);
             feedbackElement.textContent = 'เกิดข้อผิดพลาดในการโหลดข้อมูลประเทศ';
-            startNextButton.disabled = true;
+            if(startNewGameButton) startNewGameButton.disabled = true;
         }
     }
-    function startNewGame() { // Renamed from startGame to differentiate from resuming
-        clearGameState();
+
+    function startNewGame() {
+        storageManager.clearState();
         currentLevel = 0;
         totalAccumulatedScore = 0;
         levelScore = 0;
-        // questionsAnsweredInLevel = 0;
 
-        updateLevelDisplay();
-        updateScoreDisplay(); // For level score
-        updateTotalScoreDisplay();
+        uiManager.updateLevelDisplay(currentLevel > 0 ? currentLevel : "-");
+        uiManager.updateLevelScore(levelScore);
+        uiManager.updateTotalScore(totalAccumulatedScore);
 
-        gameActive = false;
-
-        gameIntroSound.pause(); // Stop intro sound
-        gameStartSound.play().catch(e => console.log("Game start sound play failed:", e)); // Play game start sound
-        // Hide initial screen elements, show game elements
-        setGameScreenActive(true);
+        gameActive = false; // Will be set to true in startNextLevel
+        if (sounds.gameIntro) sounds.gameIntro.pause();
+        sounds.gameStart.play().catch(e => console.log("Game start sound play failed:", e));
+        uiManager.setGameScreenActive(true);
         startNextLevel();
-
     }
 
     function resumeGame(savedState) {
-        allLoadedCountries = shuffleArray(allLoadedCountries); // Re-shuffle if needed or use a saved seed if implemented
+        // allLoadedCountries might need to be re-shuffled or use a saved seed if strict non-repetition across sessions is desired
+        // For now, we assume allLoadedCountries is already populated and shuffled from loadCountries
         maxLevels = Math.ceil(allLoadedCountries.length / QUESTIONS_PER_LEVEL);
 
         currentLevel = savedState.currentLevel;
@@ -136,129 +313,28 @@ document.addEventListener('DOMContentLoaded', () => {
             questionsToAskInCurrentRound = savedState.activeLevelState.questionsToAskInCurrentRound;
             incorrectlyAnsweredInCurrentRound = savedState.activeLevelState.incorrectlyAnsweredInCurrentRound;
             correctlyAnsweredInLevelOverall = new Set(savedState.activeLevelState.correctlyAnsweredInLevelOverall || []);
-            // questionsAnsweredInLevel = savedState.activeLevelState.questionsAnsweredInLevelDisplay || 0; // Not critical for queue restoration
 
-            updateLevelDisplay();
-            updateScoreDisplay();
-            updateTotalScoreDisplay();
-            updateLevelProgressDisplay();
+            uiManager.updateLevelDisplay(currentLevel);
+            uiManager.updateLevelScore(levelScore);
+            uiManager.updateTotalScore(totalAccumulatedScore);
+            uiManager.updateLevelProgress(correctlyAnsweredInLevelOverall.size, countriesForCurrentLevelDefinition.length);
 
             if (questionsToAskInCurrentRound.length > 0 || incorrectlyAnsweredInCurrentRound.length > 0) {
-                 gameActive = true;
-                 startNextButton.textContent = 'คำถามถัดไป';
-                 resetLevelButton.style.display = 'inline-block';
-                 resetLevelButton.disabled = false;
-                 continueButton.style.display = 'none';
-                 startNewGameButton.style.display = 'none';
-                 exitGameButton.style.display = 'inline-block';
-                 displayNextQuestion();
-            } else { // Level was completed, but game was saved before moving to next
-                endLevel(); // This will set up for next level or end game
+                gameActive = true;
+                startNextButton.textContent = 'คำถามถัดไป';
+                resetLevelButton.style.display = 'inline-block';
+                resetLevelButton.disabled = false;
+                // continueButton and startNewGameButton are already hidden by setGameScreenActive(true)
+                exitGameButton.style.display = 'inline-block';
+                displayNextQuestion();
+            } else { // Level was completed, game saved before "Next Level" click
+                finalizeLevelCompletion();
             }
         } else {
-            // Should not happen if savedState.currentLevel > 0, but as a fallback:
-            gameIntroSound.pause(); // Stop intro sound
-            gameStartSound.play().catch(e => console.log("Game start sound play failed:", e)); // Play game start sound
-            setGameScreenActive(true); // Ensure game screen is active
+            // Fallback if activeLevelState is missing but currentLevel > 0
+            console.warn("Resuming game but activeLevelState is missing. Starting new game as fallback.");
             startNewGame();
-
         }
-    }
-
-    function saveGameState() {
-        const gameState = {
-            currentLevel: currentLevel,
-            totalAccumulatedScore: totalAccumulatedScore,
-            activeLevelState: gameActive && currentLevel > 0 ? {
-                levelScore: levelScore, // Score for correct answers in this level
-                countriesForCurrentLevelDefinition: countriesForCurrentLevelDefinition,
-                questionsToAskInCurrentRound: questionsToAskInCurrentRound,
-                incorrectlyAnsweredInCurrentRound: incorrectlyAnsweredInCurrentRound,
-                correctlyAnsweredInLevelOverall: Array.from(correctlyAnsweredInLevelOverall),
-                // questionsAnsweredInLevelDisplay: questionsAnsweredInLevel, // Not strictly needed if restoring queues
-            } : null
-        };
-        localStorage.setItem(GAME_STATE_KEY, JSON.stringify(gameState));
-        console.log("Game state saved.");
-    }
-
-    function loadGameState() {
-        const savedState = localStorage.getItem(GAME_STATE_KEY);
-        if (savedState) {
-            try {
-                return JSON.parse(savedState);
-            } catch (e) {
-                console.error("Error parsing saved game state:", e);
-                clearGameState();
-                return null;
-            }
-        }
-        return null;
-    }
-
-    function clearGameState() {
-        localStorage.removeItem(GAME_STATE_KEY);
-        console.log("Game state cleared.");
-    }
-
-    function setGameScreenActive(isActive) {
-        if (isActive) {
-            // Show game elements, hide initial screen elements
-            gameSubtitleElement.textContent = "นี่คือธงชาติของประเทศอะไร?"; // Or similar game instruction
-            lastPlayedInfoElement.style.display = 'none';
-            startNewGameButton.style.display = 'none';
-            continueButton.style.display = 'none';
-
-            document.getElementById('game-stats').style.display = 'block'; // Assuming it's initially hidden or part of game screen
-            flagImageElement.style.display = 'block'; // Or as needed by displayNextQuestion
-            optionsContainerElement.style.display = 'grid'; // Or 'block'
-            feedbackElement.style.display = 'block';
-            levelProgressStatsElement.style.display = 'block'; // Or as needed
-            exitGameButton.style.display = 'inline-block';
-            resetLevelButton.style.display = 'inline-block'; // If applicable
-            startNextButton.style.display = 'inline-block'; // This is the main game progression button
-        } else {
-            // Show initial screen elements, hide game elements
-            document.getElementById('game-stats').style.display = 'none';
-            flagImageElement.style.display = 'none';
-            optionsContainerElement.innerHTML = ''; // Clear previous options
-            optionsContainerElement.style.display = 'none'; // Hide the container
-            feedbackElement.innerHTML = ''; // Clear feedback
-            questionInfoElement.style.display = 'none';
-            levelProgressStatsElement.style.display = 'none';
-            exitGameButton.style.display = 'none';
-            resetLevelButton.style.display = 'none';
-            startNextButton.style.display = 'none'; // Hide the game's next button
-
-            // Stop other game sounds before starting intro sound
-            gameStartSound.pause();
-            correctSound.pause();
-            incorrectSound.pause();
-            levelUpSound.pause();
-
-            gameIntroSound.currentTime = 0; // Ensure it starts from the beginning
-            gameIntroSound.play().catch(e => console.log("Intro sound autoplay blocked on initial screen:", e));
-
-            startNewGameButton.style.display = 'inline-block'; // Show "Start New Game"
-        }
-    }
-    function setupInitialScreenUI() { // Called once after countries are loaded, and after exiting a game
-        updateLevelDisplay(); // Shows '-' if level 0
-        updateScoreDisplay();
-        updateTotalScoreDisplay();
-        setGameScreenActive(false); // Ensure initial screen is shown
-    }
-
-    function updateQuestionInfoDisplay() {
-        // Calculate current question number based on initial set for level minus those still in queue for current round
-        // and those pending retry. Add 1 because it's 1-indexed.
-        const questionsPresentedThisRound = countriesForCurrentLevelDefinition.length - 
-                                           (questionsToAskInCurrentRound.length + 
-                                           incorrectlyAnsweredInCurrentRound.filter(q => !correctlyAnsweredInLevelOverall.has(q.countryCode)).length);
-        currentQuestionNumberElement.textContent = Math.min(questionsPresentedThisRound +1, countriesForCurrentLevelDefinition.length);
-        totalQuestionsInLevelElement.textContent = countriesForCurrentLevelDefinition.length;
-        questionLevelNumberElement.textContent = currentLevel;
-        questionInfoElement.style.display = 'block';
     }
 
     function startNextLevel() {
@@ -269,12 +345,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         levelScore = 0;
-        // questionsAnsweredInLevel = 0;
         correctlyAnsweredInLevelOverall.clear();
         incorrectlyAnsweredInCurrentRound = [];
 
-        updateLevelDisplay();
-        updateScoreDisplay();
+        uiManager.updateLevelDisplay(currentLevel);
+        uiManager.updateLevelScore(levelScore);
 
         const startIndex = (currentLevel - 1) * QUESTIONS_PER_LEVEL;
         const endIndex = startIndex + QUESTIONS_PER_LEVEL;
@@ -282,95 +357,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (countriesForCurrentLevelDefinition.length === 0) {
             feedbackElement.textContent = 'ไม่มีคำถามสำหรับ Level นี้แล้ว';
-            endGame(true); // Indicate an issue
+            endGame(true);
             return;
         }
-        questionsToAskInCurrentRound = shuffleArray([...countriesForCurrentLevelDefinition]); // Start with all questions for the level, shuffled
-        updateLevelProgressDisplay(); // Initialize progress display for the new level
+        questionsToAskInCurrentRound = shuffleArray([...countriesForCurrentLevelDefinition]);
+        uiManager.updateLevelProgress(0, countriesForCurrentLevelDefinition.length);
 
         gameActive = true;
         startNextButton.textContent = 'คำถามถัดไป';
         resetLevelButton.style.display = 'inline-block';
         resetLevelButton.disabled = false;
-        continueButton.style.display = 'none'; // Hide continue button once game starts
-        startNewGameButton.style.display = 'none';
         exitGameButton.style.display = 'inline-block';
         levelProgressStatsElement.style.display = 'block';
         displayNextQuestion();
     }
 
     function displayNextQuestion() {
+        if (!gameActive) return;
+
         if (questionsToAskInCurrentRound.length === 0) {
-            // Current round is finished, check if there are incorrect answers to retry
             if (incorrectlyAnsweredInCurrentRound.length > 0) {
                 questionsToAskInCurrentRound = shuffleArray([...incorrectlyAnsweredInCurrentRound]);
-                incorrectlyAnsweredInCurrentRound = []; // Clear for the new round of retries
+                incorrectlyAnsweredInCurrentRound = [];
                 feedbackElement.innerHTML = 'มาลองตอบคำถามที่ตอบผิดอีกครั้ง!';
             } else {
-                // All questions in the level are now correctly answered
-                endLevel();
+                console.warn("displayNextQuestion: All queues empty, but handleAnswer should have finalized level.");
+                if (gameActive) finalizeLevelCompletion();
                 return;
             }
         }
 
-        if (questionsToAskInCurrentRound.length === 0 && incorrectlyAnsweredInCurrentRound.length === 0) {
-             // This case means all questions in the level are correctly answered.
-            endLevel(); // Handles logic for moving to next level or finishing game
-            return;
-        }
+        feedbackElement.innerHTML = ''; // Clear previous feedback
+        flagImageElement.style.display = 'block'; // Ensure flag is visible
 
-        feedbackElement.innerHTML = '';
-        optionsContainerElement.innerHTML = '';
-        flagImageElement.style.display = 'block';
+        const currentQNum = countriesForCurrentLevelDefinition.length -
+                           (questionsToAskInCurrentRound.length +
+                            incorrectlyAnsweredInCurrentRound.filter(q => !correctlyAnsweredInLevelOverall.has(q.countryCode)).length) + 1;
+        uiManager.updateQuestionInfo(
+            Math.min(currentQNum, countriesForCurrentLevelDefinition.length),
+            countriesForCurrentLevelDefinition.length,
+            currentLevel
+        );
 
-        updateQuestionInfoDisplay();
+        currentCorrectAnswer = questionsToAskInCurrentRound.shift();
 
-        // Pick the next question from the current round's queue
-        currentCorrectAnswer = questionsToAskInCurrentRound.shift(); // Get and remove the first question
-
-        // Get 3 distractor options from the entire pool of countries, excluding the correct answer
         let distractors = [];
         const tempCountryPool = allLoadedCountries.filter(c => c.countryCode !== currentCorrectAnswer.countryCode);
-        const shuffledDistractorPool = shuffleArray([...tempCountryPool]); // Use a copy
+        const shuffledDistractorPool = shuffleArray([...tempCountryPool]);
 
         for (let i = 0; i < 3 && i < shuffledDistractorPool.length; i++) {
             distractors.push(shuffledDistractorPool[i]);
         }
-
-        if (distractors.length < 3 && allLoadedCountries.length >= 4) {
-            console.warn("Could not find 3 unique distractors, trying to fill...");
-             // Attempt to fill with any other country not already chosen
+        // Ensure 3 distractors if possible
+        if (distractors.length < 3 && allLoadedCountries.length >= MIN_COUNTRIES_FOR_GAME) {
             for (const country of allLoadedCountries) {
                 if (distractors.length >= 3) break;
-                if (country.countryCode !== currentCorrectAnswer.countryCode && !distractors.some(d => d.countryCode === country.countryCode)) {
-                    distractors.push(country);
+                if (country.countryCode !== currentCorrectAnswer.countryCode && !distractors.some(d => d.countryCode === country.countryCode) && !optionsForQuestion.some(o => o.countryCode === country.countryCode) ) {
+                     distractors.push(country);
                 }
             }
         }
 
+
         const optionsForQuestion = shuffleArray([currentCorrectAnswer, ...distractors]);
 
-        if (optionsForQuestion.length < 1) { // Should have at least the correct answer
+        if (optionsForQuestion.length < 1) {
             console.error("Failed to generate any options for the question.");
             feedbackElement.textContent = 'เกิดข้อผิดพลาดในการสร้างตัวเลือกคำถาม';
-            endLevel(); // End the current level attempt due to error
+            finalizeLevelCompletion();
             return;
         }
 
         flagImageElement.src = currentCorrectAnswer.flagURL;
         flagImageElement.alt = `Flag of ${getCountryName(currentCorrectAnswer)}`;
+        uiManager.displayOptions(optionsForQuestion, handleAnswer);
 
-        // Shuffle options
-        optionsForQuestion.forEach(country => {
-            const button = document.createElement('button');
-            button.classList.add('btn', 'btn-outline-secondary', 'btn-lg', 'btn-option');
-            button.textContent = getCountryName(country);
-            button.addEventListener('click', () => handleAnswer(country));
-            optionsContainerElement.appendChild(button);
-        });
-        // questionsAnsweredInLevel tracks attempts in a round, or unique questions presented.
-        // For "X of Y" display, it's better to calculate based on countriesForCurrentLevelDefinition.length and remaining questions.
-        startNextButton.disabled = true; // Disable next until an answer is chosen
+        startNextButton.disabled = true;
     }
 
     function getCountryName(country) {
@@ -379,78 +441,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleAnswer(selectedCountry) {
         if (!gameActive) return;
-
-        // Disable all option buttons
-        const optionButtons = optionsContainerElement.querySelectorAll('button');
-        optionButtons.forEach(btn => btn.disabled = true);
-
-        // questionsAnsweredInLevel++; // Increment for each answer attempt - not used for core logic restoration
+        uiManager.disableOptionButtons();
 
         if (selectedCountry.countryCode === currentCorrectAnswer.countryCode) {
             if (!correctlyAnsweredInLevelOverall.has(currentCorrectAnswer.countryCode)) {
-                levelScore++; // Only increment level score if it's the first time getting this question right
+                levelScore++;
                 totalAccumulatedScore++;
                 correctlyAnsweredInLevelOverall.add(currentCorrectAnswer.countryCode);
-                correctSound.play();
+                sounds.correct.play();
             }
-            feedbackElement.innerHTML = '<span class="feedback-correct">ถูกต้อง!</span>';
-            // If it was in incorrectlyAnsweredInCurrentRound, it's now correct, so it won't be added back.
+            uiManager.showFeedback('ถูกต้อง!', true);
         } else {
-            incorrectSound.play(); // Play incorrect sound
-            feedbackElement.innerHTML = `<span class="feedback-incorrect">ผิด!</span> คำตอบที่ถูกต้องคือ: ${getCountryName(currentCorrectAnswer)}`;
+            sounds.incorrect.play();
+            uiManager.showFeedback(`ผิด! คำตอบที่ถูกต้องคือ: ${getCountryName(currentCorrectAnswer)}`, false);
             if (!incorrectlyAnsweredInCurrentRound.some(c => c.countryCode === currentCorrectAnswer.countryCode) &&
                 !correctlyAnsweredInLevelOverall.has(currentCorrectAnswer.countryCode)) {
-                // Add to retry list only if not already there from this round and not already marked as overall correct
-                // Ensure we add the full country object, not just the code
                 incorrectlyAnsweredInCurrentRound.push(currentCorrectAnswer);
             }
         }
-        updateScoreDisplay();
-        updateTotalScoreDisplay();
-        updateLevelProgressDisplay();
+        uiManager.updateLevelScore(levelScore);
+        uiManager.updateTotalScore(totalAccumulatedScore);
+        uiManager.updateLevelProgress(correctlyAnsweredInLevelOverall.size, countriesForCurrentLevelDefinition.length);
 
-        saveGameState(); // Save after every answer
-        startNextButton.disabled = false; // Enable next button
+        storageManager.saveState();
 
         if (questionsToAskInCurrentRound.length === 0 && incorrectlyAnsweredInCurrentRound.length === 0) {
-            if (currentLevel < maxLevels) {
-                startNextButton.textContent = 'Level ถัดไป';
-            } else {
-                startNextButton.textContent = 'ดูผลสรุป';
-            }
-            resetLevelButton.disabled = true; // Can't reset a completed level until next one starts or game restarts
+            finalizeLevelCompletion();
         } else {
             startNextButton.textContent = 'คำถามถัดไป';
         }
+        startNextButton.disabled = false;
     }
-
-    // --- UI Update Functions ---
-    function updateScoreDisplay() {
-        levelScoreElement.textContent = levelScore;
-    }
-
-    function updateLevelDisplay() {
-        currentLevelElement.textContent = currentLevel > 0 ? currentLevel : "-";
-    }
-
-    function updateTotalScoreDisplay() {
-        totalAccumulatedScoreElement.textContent = totalAccumulatedScore;
-    }
-
-    function updateLevelProgressDisplay() {
-        const totalQuestions = countriesForCurrentLevelDefinition.length;
-        const correctAnswers = correctlyAnsweredInLevelOverall.size;
-        correctInLevelCountElement.textContent = correctAnswers;
-        totalUniqueQuestionsInLevelElement.textContent = totalQuestions > 0 ? totalQuestions : QUESTIONS_PER_LEVEL;
-
-        const progressPercentage = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
-        levelProgressBarElement.style.width = `${progressPercentage}%`;
-        levelProgressBarElement.setAttribute('aria-valuenow', progressPercentage);
-    }
-    // --- Helper Functions ---
 
     function shuffleArray(array) {
-        let newArray = [...array]; // Create a copy to avoid mutating the original
+        let newArray = [...array];
         for (let i = newArray.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
@@ -458,7 +482,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return newArray;
     }
 
-    // --- Game Flow Functions ---
     function endGame(dataError = false) {
         gameActive = false;
         flagImageElement.style.display = 'none';
@@ -471,65 +494,59 @@ document.addEventListener('DOMContentLoaded', () => {
         startNextButton.textContent = 'เริ่มเกมใหม่ทั้งหมด';
         startNextButton.disabled = false;
         resetLevelButton.style.display = 'none';
-        continueButton.style.display = 'none'; // Hide continue button
-        startNewGameButton.style.display = 'inline-block'; // Show start new game button
+        continueButton.style.display = 'none';
+        startNewGameButton.style.display = 'inline-block';
         exitGameButton.style.display = 'none';
         questionInfoElement.style.display = 'none';
         levelProgressStatsElement.style.display = 'none';
-        clearGameState();
+        storageManager.clearState();
     }
 
-    function endLevel() { // Called when all questions in a level are answered or no more available
-        gameActive = false; // Pause game flow until user action
+    function finalizeLevelCompletion() {
+        gameActive = false;
         feedbackElement.innerHTML = `<h3>Level ${currentLevel} เสร็จสิ้น!</h3><p>คุณตอบถูกทุกข้อใน Level นี้แล้ว</p>`;
-        optionsContainerElement.innerHTML = ''; // Clear options
+        optionsContainerElement.innerHTML = '';
         questionInfoElement.style.display = 'none';
-        // flagImageElement.style.display = 'none'; // Keep last flag or hide
 
         if (currentLevel < maxLevels) {
             startNextButton.textContent = 'Level ถัดไป';
+            // Sound moved to button click
         } else {
             startNextButton.textContent = 'ดูผลสรุป';
         }
         startNextButton.disabled = false;
-        resetLevelButton.disabled = true; // Can't reset once level is officially "ended" this way
-        saveGameState(); // Save progress after completing a level
-        if (currentLevel < maxLevels) { levelUpSound.play(); } // Play level up sound if there's a next level
+        resetLevelButton.disabled = true;
+        storageManager.saveState();
     }
 
     function resetCurrentLevel() {
-        if (currentLevel === 0) return; // No level to reset
-
-        // Subtract points earned *only for questions correctly answered for the first time* in this level's attempt
-        totalAccumulatedScore -= levelScore; // levelScore only counts first-time correct answers in this level
-        updateTotalScoreDisplay();
-
+        if (currentLevel === 0) return;
+        totalAccumulatedScore -= levelScore; // Subtract points from this attempt
+        uiManager.updateTotalScore(totalAccumulatedScore);
 
         levelScore = 0;
-        questionsAnsweredInLevel = 0;
-        updateScoreDisplay();
+        uiManager.updateLevelScore(levelScore);
 
         correctlyAnsweredInLevelOverall.clear();
         incorrectlyAnsweredInCurrentRound = [];
-        questionsToAskInCurrentRound = shuffleArray([...countriesForCurrentLevelDefinition]); // Reset questions for the level
-        updateLevelProgressDisplay();
+        questionsToAskInCurrentRound = shuffleArray([...countriesForCurrentLevelDefinition]);
+        uiManager.updateLevelProgress(0, countriesForCurrentLevelDefinition.length);
 
         gameActive = true;
         startNextButton.textContent = 'คำถามถัดไป';
-        resetLevelButton.disabled = false; // It's active again
+        resetLevelButton.disabled = false;
         displayNextQuestion();
-        saveGameState(); // Save state after reset
+        storageManager.saveState();
     }
 
     function exitGameAndSaveProgress() {
         if (gameActive) {
-            saveGameState(); // Ensure the very latest state is saved
+            storageManager.saveState();
         }
         gameActive = false;
-        setupInitialScreenUI(); // Reset UI to initial screen
-        // setupInitialScreenUI will attempt to play intro sound
-        gameSubtitleElement.innerHTML = 'เกมถูกบันทึกแล้ว!'; // Update subtitle
-        const savedState = loadGameState(); // Check if state was actually saved
+        uiManager.setupInitialScreen();
+        gameSubtitleElement.innerHTML = 'เกมถูกบันทึกแล้ว!';
+        const savedState = storageManager.loadState();
         if (savedState && savedState.currentLevel > 0) {
             lastLevelElement.textContent = savedState.currentLevel;
             lastScoreElement.textContent = savedState.totalAccumulatedScore;
@@ -539,16 +556,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Event Listeners ---
-
     startNextButton.addEventListener('click', () => {
         const buttonText = startNextButton.textContent;
-        // This button is now primarily for in-game progression
         if (buttonText === 'Level ถัดไป') {
+            sounds.levelUp.play().catch(e => console.error("Level up sound play failed:", e));
             startNextLevel();
         } else if (buttonText === 'คำถามถัดไป') {
             displayNextQuestion();
         } else if (buttonText === 'ดูผลสรุป' || buttonText === 'เริ่มเกมใหม่ทั้งหมด') {
-            startNewGame(); // This will reset and start a new game.
+            startNewGame();
         }
     });
 
@@ -556,21 +572,19 @@ document.addEventListener('DOMContentLoaded', () => {
         startNewGame();
     });
 
-
     continueButton.addEventListener('click', () => {
-        const savedState = loadGameState();
+        const savedState = storageManager.loadState();
         if (savedState) {
-            setGameScreenActive(true); // Transition to game screen
-            gameIntroSound.pause(); // Stop intro sound
+            uiManager.setGameScreenActive(true);
+            if (sounds.gameIntro) sounds.gameIntro.pause();
+            sounds.gameStart.play().catch(e => console.log("Game start sound play failed:", e));
             resumeGame(savedState);
-            continueButton.style.display = 'none';
+            continueButton.style.display = 'none'; // Already handled by setGameScreenActive
         } else {
-            // Should not happen if button is visible, but as a fallback
             feedbackElement.textContent = 'ไม่พบข้อมูลการเล่นล่าสุด';
             continueButton.style.display = 'none';
         }
     });
-
 
     resetLevelButton.addEventListener('click', resetCurrentLevel);
     exitGameButton.addEventListener('click', exitGameAndSaveProgress);
